@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>伏せた文章の受け取り</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>伏せた文章の受け取り</h1>
+  <p class="lead">このページは文章をどこにも送信しません。</p>
+  <section class="panel">
+    <div class="status" id="status"></div>
+    <textarea id="out" readonly spellcheck="false" class="hidden"></textarea>
+    <div class="row">
+      <button class="primary hidden" id="btn-copy">コピー</button>
+      <button class="danger" id="btn-clear">削除</button>
+    </div>
+    <ul class="notes">
+      <li>Claudeに貼る前に、もう一度目で確認してください。</li>
+      <li>使い終わったら「削除」を押して、このタブを閉じてください。</li>
+    </ul>
+  </section>
+</main>
+<script src="codec.js"></script>
+<script src="receive.js"></script>
+</body>
+</html>

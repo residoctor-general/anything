@@ -46,3 +46,25 @@
 
 ## 未決定の事項
 - なし（すべて決定済み）
+
+## 伏せるページ（mask/）の使い方
+- 公開先（GitHub Pagesを有効にした後）：https://residoctor-general.github.io/anything/mask/
+- 手順：文章を貼る → 「伏せる」 → 色付きの箇所を確認し、必要ならなぞって「伏せる」／「元に戻す」 → 「QRコードを表示」 → iPhoneのカメラで読む → 受け取りページで「コピー」 → Claudeに貼る
+- 使い終わったら、PCでもiPhoneでも「削除」を押す。
+
+### ファイル
+- `mask/index.html` `mask/app.js`：伏せるページ（PC用）
+- `mask/rules.js`：伏せる規則
+- `mask/codec.js`：QRコード用に文章を詰める・戻す
+- `mask/r.html` `mask/receive.js`：受け取り用ページ（iPhone用）
+- `mask/vendor/qrcode.js`：QRコードを作る部品（qrcode-generator、MITライセンス）
+- `tests/`：架空のカルテ文と確認用スクリプト（`node tests/run.js`、`node tests/cases.js`、`node tests/check_nopii.js`）
+
+### 安全のための仕組み
+- ページの設定で、外部との通信を禁止している（Content-Security-Policy の connect-src 'none'）。
+- 病院のPCには何も保存しない。iPhone側だけ、QRコードが複数枚のときに限り、そろうまで一時的に保存する（30分で自動的に消える。そろったら即削除）。
+- QRコードの文章はURLの「#」以降に入れるので、サーバーには送られない。受け取りページを開いたら、すぐにアドレス欄からも消す。
+- 検索エンジンには載せない（noindex）。
+
+### QRコード1枚に入る量
+- 実際のカルテ文で、1枚あたり約500〜600字（伏せた後の文章）。それを超えると自動的に複数枚に分かれる。
