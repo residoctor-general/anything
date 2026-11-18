@@ -70,5 +70,6 @@
 - 実際のカルテ文で、1枚あたり約500〜600字（伏せた後の文章）。それを超えると自動的に複数枚に分かれる。
 
 ## 相談役（consult/）
-- `consult/project-instructions.md`：Claudeのプロジェクトに貼る指示文（記事の不備の通知も含む）
+- `consult/project-instructions.md`：相談役の指示文の元（記事の不備の通知も含む）
+- `consult/skill/` と `consult/shinryo-soudan.zip`：claude.ai に登録したスキル（登録済み）
 - `consult/setup.md`：準備の手順と使い方
