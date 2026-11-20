@@ -46,6 +46,12 @@
 
 各項目は「◎ できた / △ 一部 / × できない」と、Siriの返答をひと言メモすれば十分。
 
+## 実機での結果
+
+| 日付 | 試したこと | 結果 | Siriの返答 | 補足 |
+|---|---|---|---|---|
+| 2026-11-20 | 「昨日の体重64.8kgで記録して」（文字入力） | × | 「そのお手伝いはできません。」 | 調査どおり、日本語のSiriはヘルスケアに書けない。iOSのバージョンとSiriの種類は未記録。日付を指定したこと（「昨日の」）が原因の可能性は残る |
+
 ## 出典
 - Apple サポート「Turn Siri's access to your Health app data on or off」 https://support.apple.com/en-vn/118493
 - 9to5Mac「You can now ask Siri AI questions about your health data, with iOS 27.3 beta 2」 https://9to5mac.com/2026/11/16/siri-ai-health-app-questions-ios-27/
